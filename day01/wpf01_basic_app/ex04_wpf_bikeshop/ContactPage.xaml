@@ -13,11 +13,11 @@
                VerticalAlignment="Top"/>
         <Label Content="내용" HorizontalAlignment="Left" Margin="26,69,0,0" 
                VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="86,24,0,0" TextWrapping="Wrap" 
-                 Text="" VerticalAlignment="Top" Width="654" Height="22"
-                 ToolTip="받는사람" />
-        <TextBox HorizontalAlignment="Left" Margin="98,89,0,0" TextWrapping="Wrap" 
-                 Text="" VerticalAlignment="Top" Width="653" Height="313" 
+        <TextBox Margin="86,24,32,0" TextWrapping="Wrap" 
+                 Text="" VerticalAlignment="Top" Height="22"
+                 ToolTip="받는사람 주소" />
+        <TextBox Margin="86,69,32,19" TextWrapping="Wrap" 
+                 Text=""  
                  ToolTip="내용입력" />
 
     </Grid>
