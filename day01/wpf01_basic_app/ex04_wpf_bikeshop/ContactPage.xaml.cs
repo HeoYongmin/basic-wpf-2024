@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ex04_wpf_bikeshop;
+using ex04_wpf_bikeshop.Logic;
 
 namespace ex04_wpf_bikeshop
 {
@@ -23,6 +25,17 @@ namespace ex04_wpf_bikeshop
         public ContactPage()
         {
             InitializeComponent();
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+            // 코드에서 속성값을 지정할때 사용방법
+            Bike MyBike = new Bike();
+            MyBike.Speed = 60;
+            MyBike.Color = Colors.Black;
+
+            TextBox text1 = new TextBox();
+           // MessageBox.Show(DgBike.Speed.ToString());
         }
     }
 }
