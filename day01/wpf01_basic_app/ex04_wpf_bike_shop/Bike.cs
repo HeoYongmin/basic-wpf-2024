@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 
-namespace ex04_wpf_bikeshop.Logic
+namespace ex04_wpf_bike_shop
 {
     public class Bike
     {

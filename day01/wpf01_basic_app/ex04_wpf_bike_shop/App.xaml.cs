@@ -2,7 +2,7 @@
 using System.Data;
 using System.Windows;
 
-namespace ex04_wpf_bikeshop
+namespace ex04_wpf_bike_shop
 {
     /// <summary>
     /// Interaction logic for App.xaml

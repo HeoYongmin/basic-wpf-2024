@@ -10,7 +10,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ex04_wpf_bikeshop
+namespace ex04_wpf_bike_shop
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -28,7 +28,6 @@ namespace ex04_wpf_bikeshop
             // UriKind.RelativeOrAbsolute 파라미터를 반드시 넣어야!
             MainFrame.Source = new Uri("/MenuPage.xaml", UriKind.RelativeOrAbsolute);
             Debug.WriteLine("Debug!");
-
         }
     }
 }

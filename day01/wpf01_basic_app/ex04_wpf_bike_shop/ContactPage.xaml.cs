@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ex04_wpf_bike_shop;
+using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using ex04_wpf_bikeshop;
-using ex04_wpf_bikeshop.Logic;
 
-namespace ex04_wpf_bikeshop
+namespace ex04_wpf_bike_shop
 {
     /// <summary>
     /// ContactPage.xaml에 대한 상호 작용 논리
@@ -35,7 +35,11 @@ namespace ex04_wpf_bikeshop
             MyBike.Color = Colors.Black;
 
             TextBox text1 = new TextBox();
-           // MessageBox.Show(DgBike.Speed.ToString());
+            StpBike.DataContext = MyBike;
+            //MessageBox.Show(DgBike.Speed.ToString());
+
         }
+
+       
     }
 }

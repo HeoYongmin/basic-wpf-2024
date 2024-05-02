@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ex04_wpf_bikeshop
+namespace ex04_wpf_bike_shop
 {
     /// <summary>
     /// MenuPage.xaml에 대한 상호 작용 논리
@@ -27,21 +27,18 @@ namespace ex04_wpf_bikeshop
 
         private void BtnProduct_Click(object sender, RoutedEventArgs e)
         {
-            // 메뉴클릭시 화면전환, NavigationService & Frame 컨트롤
-            NavigationService.Navigate(new Uri("/ProductPage.xaml",
-               UriKind.RelativeOrAbsolute));
+            // 메뉴 클릭시 화면전환, NavigationService & Frame 컨트롤
+            NavigationService.Navigate(new Uri("/ProductPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void BtnLiveSupport_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/SupportPage.xaml",
-               UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new Uri("/SupportPage.xaml", UriKind.RelativeOrAbsolute));
         }
 
         private void BtnEmailSupport_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/ContactPage.xaml",
-                UriKind.RelativeOrAbsolute));
+            NavigationService.Navigate(new Uri("/ContactPage.xaml",UriKind.RelativeOrAbsolute));
         }
     }
 }
