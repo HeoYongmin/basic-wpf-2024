@@ -30,8 +30,21 @@ IoT 개발자 WPF 학습리포지토리
         - dataContext : 데이터를 담아서 전달하는 이름
         - 전통적인 윈폼 코드비하인드에서 데이터를 처리하는 것을 지양 - 디자인, 개발 부분 분리
 
-## 3일차
-- WPF 기본학습
-    - 데이터바인딩 마무리
-    - 디자인 리소스
+## 3일차(2024.05.02)
+- WPF에서 중요한 개념(윈폼과의 차이점)
+    1. 데이터바인딩 - 바인딩 키워드로 코드와 분리
+    2. 옵저버패턴 - 값이 변경된 사실을 사용자에게 공지 OnPropertyChanged 이벤트
+    3. 디자인리소스 - 각 컨트롤마다 디자인(X), 리소스로 디자인 공유
+        - 각 화면당 Resources - 자기 화면에서 적용되는 디자인
+        - App.xmal Resources  - 애플리케이션 전체에 적용되는 디자인
+        - 리소스사전 - 공유할 디자인 내용이 많을때 파일로 따로 지정 
+
 - WPF MVVM
+    - MVC (Model View Controller)ㅡ 패턴
+        - 웹개발(Spring, ASP, NET, MVC, django), etc...) 현재도 사용되고 있음
+        - Model : Data입추력 처리를 담당
+        - View : 디스플레이 화면 담당
+        - Controller : Vuew를 저에 ,Model 처리 중앙에 관장
+
+    - MVVM(Model View ViewModel)
+        - Model : Data 
