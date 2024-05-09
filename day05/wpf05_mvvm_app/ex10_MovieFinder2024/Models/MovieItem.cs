@@ -1,5 +1,8 @@
 ﻿// TMDB API로 넘어온 검색결과를 담는 객체, List<MovieItem>
 
+using ControlzEx.Theming;
+using System.Windows.Forms;
+
 namespace ex10_MovieFinder2024.Models
 {
     public class MovieItem
@@ -17,6 +20,10 @@ namespace ex10_MovieFinder2024.Models
         public int Vote_Count { get; set; }
         
         public DateTime? Reg_Date { get; set; } // 최초에는 없기때문에 Nullable 지정
+
+        public static readonly string CHECK_QUERY = @"SELECT COUNT(*) 
+                                                          FROM MovieItem
+                                                         WHERE Id = @Id";
 
         // 쿼리파트
         public static readonly string SELECT_QUERY = @"SELECT [Id]
