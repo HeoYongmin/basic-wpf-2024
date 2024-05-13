@@ -5,12 +5,73 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
-    xmlns:icoPack="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
     xmlns:local="clr-namespace:ex12_Busan_ExhibitionList"
     mc:Ignorable="d"
-    Title="Busan Exhibition List" Height="450" Width="800" MinHeight="300" MinWidth="800"
-    Loaded="MetroWindow_Loaded">
+    Title="Busan Exhibition List" Height="450" Width="800" MinHeight="300" MinWidth="750"
+    Loaded="MetroWindow_Loaded" FontFamily="NanumGothic">
+    <mah:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <iconPacks:PackIconMaterial Kind="AlphaE" Margin="10,8,0,0" Foreground="White"/>
+        </DataTemplate>
+    </mah:MetroWindow.IconTemplate>
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="38"/>
+            <RowDefinition Height="47"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="25"/>
+        </Grid.RowDefinitions>
 
+        <Label Grid.Column="0" Grid.Row="0" Content="부산 전시회 상세 서비스" FontSize="14" FontWeight="ExtraBold" Margin="4,4,4,4" />
+        
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button x:Name="BtnSearch" Content="전체 조회" FontSize="15" Width="90" Margin="3" Style="{StaticResource MahApps.Styles.Button.Square.Highlight}" 
+                        Click="BtnSearch_Click"/>
+                <Button x:Name="BtnFavSearch" Content="즐겨찾기" FontSize="15" Width="90" Margin="3" Style="{StaticResource MahApps.Styles.Button.Square.Accent}" 
+                        Click="BtnFavSearch_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid Grid.Column="0" Margin="0,38,0,0" Grid.RowSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox Grid.Column="0" Grid.Row="1" x:Name="TxtSearch" FontSize="15" 
+                     mah:TextBoxHelper.Watermark="전시회 이름을 입력하세요"
+                     mah:TextBoxHelper.UseFloatingWatermark="True"
+                     mah:TextBoxHelper.ClearTextButton="True"
+                     InputMethod.PreferredImeState="On"
+                     InputMethod.PreferredImeConversionMode="Native"
+                     KeyDown="TxtSearch_KeyDown"  Margin="0,1,0,0" />
+
+            <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Center" >
+                <Button x:Name="BtnSave" Content="저장" FontSize="18" Width="90" Margin="3" Style="{StaticResource MahApps.Styles.Button.Square.Accent}" 
+                        Click="BtnSave_Click"/>
+                <Button x:Name="BtnDelete" Content="삭제" FontSize="18" Width="90" Margin="3" Style="{StaticResource MahApps.Styles.Button.Square.Highlight}" 
+                        Click="BtnDelete_Click"/>
+
+            </StackPanel>
+        </Grid>
+
+        <DataGrid Grid.Row="2" Grid.Column="0" x:Name="GrdResult" Margin="5,5,5,5"
+                  IsReadOnly="True" ItemsSource="{Binding}"
+                  Style="{StaticResource MahApps.Styles.DataGrid.Azure}"
+                  MouseDoubleClick="GrdResult_MouseDoubleClick">
+        </DataGrid>
+        
+
+        <StatusBar Grid.Row="3">
+            <StatusBarItem Content="부산 전시회 상세 서비스"/>
+            <Separator Style="{StaticResource MahApps.Styles.Separator.StatusBar}"/>
+            <StatusBarItem x:Name="StsResult" />
+        </StatusBar>
     </Grid>
 </mah:MetroWindow>
