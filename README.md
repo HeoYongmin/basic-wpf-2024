@@ -155,3 +155,7 @@ IoT 개발자 WPF 학습리포지토리
 
 ## 8일차
 - WPF 개인프로젝트 포트폴리오 작업
+
+https://github.com/HeoYongmin/basic-wpf-2024/assets/158007383/f39d8968-aff3-4497-bce9-5e0bd2b67363
+
+
