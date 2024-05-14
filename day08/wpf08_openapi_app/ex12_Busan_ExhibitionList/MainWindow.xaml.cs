@@ -240,11 +240,11 @@ namespace ex12_Busan_ExhibitionList
                     }
                     if (delRes == GrdResult.SelectedItems.Count)
                     {
-                        await this.ShowMessageAsync("오류", $"즐겨찾기 {delRes}건 삭제");
+                        await this.ShowMessageAsync("삭제", $"즐겨찾기 {delRes}건 삭제");
                     }
                     else
                     {
-                        await this.ShowMessageAsync("오류", $"즐겨찾기 {GrdResult.SelectedItems.Count}건중 {delRes}건 삭제");
+                        await this.ShowMessageAsync("삭제", $"즐겨찾기 {GrdResult.SelectedItems.Count}건중 {delRes}건 삭제");
                     }
                 }
             }
